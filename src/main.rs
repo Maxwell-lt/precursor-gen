@@ -51,6 +51,7 @@ fn calculate_canvas_size(data: &str) -> Result<(u32, u32)> {
 
     let min_height = lines.len() * 40;
     let height_next_multiple = ((min_height + 239) / 240) * 240;
+    println!("Canvas size: {}x{} blocks", width_next_multiple / 240, height_next_multiple / 240);
     Ok((width_next_multiple as u32, height_next_multiple as u32))
 }
 
