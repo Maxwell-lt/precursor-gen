@@ -1,0 +1,12 @@
+glyph pixel: 5px*5px
+
+line separators: 2px high, 2px from glyph, 8px from prior line
+
+character spacing: ~5px
+
+word spacers: glyph-scale top and bottom pixels set, spread across width. minimum 1 glyph wide, expand for justification
+
+6 full lines per MC block
+line height is 2px + 2px + 2px + 25px + 2px + 2px + 6px = 41px ~= 40px ( we will use 7 pixels [2 + 5] for separator spacing to match 40px exactly)
+an MC block is then 40px * 6 = 240px
+therefore, 8 glyphs fit horizontally in each block (240 / (5*6))
