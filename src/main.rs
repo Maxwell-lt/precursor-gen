@@ -49,9 +49,9 @@ fn calculate_canvas_size(data: &str) -> Result<(u32, u32)> {
     let min_width = longest_line * 6 * 5;
     let width_next_multiple = ((min_width + 239) / 240) * 240;
 
-    // Height can be slightly less than a full block, to improve scaling.
-    let height = lines.len() * 40;
-    Ok((width_next_multiple as u32, height as u32))
+    let min_height = lines.len() * 40;
+    let height_next_multiple = ((min_height + 239) / 240) * 240;
+    Ok((width_next_multiple as u32, height_next_multiple as u32))
 }
 
 fn draw_spacers(buf: &mut RgbaImage, colors: &Vec<Rgba<u8>>, line_count: usize) {
